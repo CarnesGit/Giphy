@@ -13,34 +13,48 @@
 </head>
 
 <body>
-    <h1 id="head">Find your GIF!</h1>
-    <div id="myBtns">
-        <h2 class="myBtnH2">Some of my favorites are in</h2>
-        <button id="searchBtn" type="button" class="btn btn-primary">Science Fiction</button>
-        <button id="searchBtn" type="button" class="btn btn-primary">Fantasy</button>
-        <button id="searchBtn" type="button" class="btn btn-primary">Beer</button>
-        <button id="searchBtn" type="button" class="btn btn-primary">Coding</button>
-        <h2 class="myBtnH2">What are your's?</h2>
-    </div>
-    <div id="search">
-        <input id="searchText" type="text" placeholder="What are we looking for?" name="search">
-        <button id="searchBtn" type="button" class="btn btn-primary">Search</button>
-        <button id="clearSearchBtn" type="button" class="btn btn-danger">Clear Search</button>
-    </div>
     <div class="container">
-        <div class="row">
-            <img id="gif1" src="" alt="1st search result">
-            <div id="gif2" class="col"></div>
-            <div id="gif3" class="col"></div>
-            <div id="gif4" class="col"></div>
-            <div id="gif5" class="col"></div>
+        <h1 id="head">Find your GIF!</h1>
+        <div id="myBtns">
+            <h2 class="myBtnH2">Some of my favorites are in</h2>
+            <button id="searchBtn" type="button" class="btn btn-primary">Science Fiction</button>
+            <button id="searchBtn" type="button" class="btn btn-primary">Fantasy</button>
+            <button id="searchBtn" type="button" class="btn btn-primary">Beer</button>
+            <button id="searchBtn" type="button" class="btn btn-primary">Coding</button>
+            <h2 class="myBtnH2">What are your's?</h2>
+        </div>
+        <div id="search">
+            <input id="searchText" type="text" placeholder="What are we looking for?" name="search">
+            <button id="searchBtn" type="button" class="btn btn-primary">Search</button>
+            <button id="clearSearchBtn" type="button" class="btn btn-danger">Clear Search</button>
         </div>
         <div class="row">
-            <div id="gif6" class="col"></div>
-            <div id="gif7" class="col"></div>
-            <div id="gif8" class="col"></div>
-            <div id="gif9" class="col"></div>
-            <div id="gif10" class="col"></div>
+            <div class="col-lg-12">
+                <img class="top gif img-thumbnail rounded float-left" id="gif1" src="" alt="1st search result">
+                <img class="gif img-thumbnail rounded" id="gif2" src="" alt="2nd search result">
+                <img class="top gif img-thumbnail rounded float-right" id="gif3" src="" alt="3rd search result">
+            </div>
+        </div>
+
+        <div class="row-">
+            <div class="col-lg-12">
+                <img class="left gif img-thumbnail rounded float-left" id="gif4" src="" alt="4th search result">
+                <img class="gif img-thumbnail rounded" id="gif5" src="" alt="5th search result">
+                <img class="right gif img-thumbnail rounded float-right" id="gif6" src="" alt="6th search result">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <img class="gif img-thumbnail rounded float-left" id="gif7" src="" alt="7th search result">
+                <img class="gif img-thumbnail rounded" id="gif8" src="" alt="8th search result">
+                <img class="right gif img-thumbnail rounded float-right" id="gif9" src="" alt="9th search result">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <img class="bottom gif img-thumbnail rounded" id="gif10" src="" alt="10th search result">
+            </div>
         </div>
     </div>
 </body>

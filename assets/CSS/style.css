@@ -31,3 +31,55 @@
         color: skyblue;
         margin-top: 5px;
     }
+    
+    .gif {
+        width: 200px;
+        height: 200px;
+        opacity: .50;
+    }
+    
+    .gif:hover {
+        opacity: 1
+    }
+    
+    .top {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        margin-left: 15px;
+    }
+    
+    #gif2 {
+        margin-top: 40px;
+        margin-left: 270px;
+        margin-bottom: 40px;
+    }
+    
+    #gif5 {
+        margin-top: 15px;
+        margin-left: 270px;
+        margin-bottom: 40px;
+    }
+    
+    #gif7 {
+        margin-left: 15px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    
+    #gif8 {
+        margin-left: 275px;
+        margin-top: 20px;
+    }
+    
+    .left {
+        margin-top: 20px;
+    }
+    
+    .right {
+        margin-top: 20px;
+    }
+    
+    .bottom {
+        margin-left: 470px;
+        margin-top: 40px;
+    }
