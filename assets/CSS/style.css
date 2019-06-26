@@ -1,0 +1,33 @@
+    body {
+        background: url(../Images/background.gif) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    
+    #head {
+        color: skyblue;
+        text-align: center;
+        font-size: 96px;
+    }
+    
+    #search {
+        text-align: center;
+        margin-top: 5px;
+    }
+    
+    #searchText {
+        padding-bottom: 5px;
+        width: 190px;
+    }
+    
+    #myBtns {
+        text-align: center;
+        margin-top: 5px;
+    }
+    
+    .myBtnH2 {
+        color: skyblue;
+        margin-top: 5px;
+    }
