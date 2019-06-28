@@ -3,122 +3,130 @@ $(document).ready(function() {
     var subjects = []
     var gifImage
     var search
+    var currentResponse
 
     $.ajax({
         url: queryURL,
         method: "GET"
     }).then(function(response) {
-        console.log("response", response);
-        console.log(response.data[0].images.original_still.url);
-        $('#gif1').attr("src", response.data[0].images.original_still.url);
-        $('#gif2').attr("src", response.data[1].images.original_still.url);
-        $('#gif3').attr("src", response.data[2].images.original_still.url);
-        $('#gif4').attr("src", response.data[3].images.original_still.url);
-        $('#gif5').attr("src", response.data[4].images.original_still.url);
-        $('#gif6').attr("src", response.data[5].images.original_still.url);
-        $('#gif7').attr("src", response.data[6].images.original_still.url);
-        $('#gif8').attr("src", response.data[7].images.original_still.url);
-        $('#gif9').attr("src", response.data[8].images.original_still.url);
-        $('#gif10').attr("src", response.data[9].images.original_still.url);
+        // currentResponse = response
+        // console.log("Current Response", currentResponse)
+        // console.log("response", response);
+        // console.log(response.data[0].images.original_still.url);
+        // $('#gif1').attr("src", currentResponse.data[0].images.original_still.url);
+        // $('#gif2').attr("src", currentResponse.data[1].images.original_still.url);
+        // $('#gif3').attr("src", currentResponse.data[2].images.original_still.url);
+        // $('#gif4').attr("src", currentResponse.data[3].images.original_still.url);
+        // $('#gif5').attr("src", currentResponse.data[4].images.original_still.url);
+        // $('#gif6').attr("src", currentResponse.data[5].images.original_still.url);
+        // $('#gif7').attr("src", currentResponse.data[6].images.original_still.url);
+        // $('#gif8').attr("src", currentResponse.data[7].images.original_still.url);
+        // $('#gif9').attr("src", currentResponse.data[8].images.original_still.url);
+        // $('#gif10').attr("src", currentResponse.data[9].images.original_still.url);
 
 
         $('#scienceFiction').click(function() {
-            (response).empty;
+            $(currentResponse).val('');
+            search = "science fiction";
             $.ajax({
                 url: queryURL,
                 method: "GET"
             }).then(function(response) {
-                search = "science fiction";
-                $('#gif1').attr("src", response.data[0].images.original_still.url);
-                $('#gif2').attr("src", response.data[1].images.original_still.url);
-                $('#gif3').attr("src", response.data[2].images.original_still.url);
-                $('#gif4').attr("src", response.data[3].images.original_still.url);
-                $('#gif5').attr("src", response.data[4].images.original_still.url);
-                $('#gif6').attr("src", response.data[5].images.original_still.url);
-                $('#gif7').attr("src", response.data[6].images.original_still.url);
-                $('#gif8').attr("src", response.data[7].images.original_still.url);
-                $('#gif9').attr("src", response.data[8].images.original_still.url);
-                $('#gif10').attr("src", response.data[9].images.original_still.url);
+                currentReponse = response;
+                $('#gif1').attr("src", currentResponsee.data[0].images.original_still.url);
+                $('#gif2').attr("src", currentResponse.data[1].images.original_still.url);
+                $('#gif3').attr("src", currentResponse.data[2].images.original_still.url);
+                $('#gif4').attr("src", currentResponse.data[3].images.original_still.url);
+                $('#gif5').attr("src", currentResponse.data[4].images.original_still.url);
+                $('#gif6').attr("src", currentResponse.data[5].images.original_still.url);
+                $('#gif7').attr("src", currentResponse.data[6].images.original_still.url);
+                $('#gif8').attr("src", currentResponse.data[7].images.original_still.url);
+                $('#gif9').attr("src", currentResponse.data[8].images.original_still.url);
+                $('#gif10').attr("src", currentResponse.data[9].images.original_still.url);
             });
         });
 
         $('#fantasy').click(function() {
-            (response).empty;
+            $(currentResponse).val('');
+            search = "fantasy";
             $.ajax({
                 url: queryURL,
                 method: "GET"
             }).then(function(response) {
-                search = "fantasy";
-                $('#gif1').attr("src", response.data[0].images.original_still.url);
-                $('#gif2').attr("src", response.data[1].images.original_still.url);
-                $('#gif3').attr("src", response.data[2].images.original_still.url);
-                $('#gif4').attr("src", response.data[3].images.original_still.url);
-                $('#gif5').attr("src", response.data[4].images.original_still.url);
-                $('#gif6').attr("src", response.data[5].images.original_still.url);
-                $('#gif7').attr("src", response.data[6].images.original_still.url);
-                $('#gif8').attr("src", response.data[7].images.original_still.url);
-                $('#gif9').attr("src", response.data[8].images.original_still.url);
-                $('#gif10').attr("src", response.data[9].images.original_still.url);
+                currentResponse = response;
+                $('#gif1').attr("src", currentResponse.data[0].images.original_still.url);
+                $('#gif2').attr("src", currentResponse.data[1].images.original_still.url);
+                $('#gif3').attr("src", currentResponse.data[2].images.original_still.url);
+                $('#gif4').attr("src", currentResponse.data[3].images.original_still.url);
+                $('#gif5').attr("src", currentResponse.data[4].images.original_still.url);
+                $('#gif6').attr("src", currentResponse.data[5].images.original_still.url);
+                $('#gif7').attr("src", currentResponse.data[6].images.original_still.url);
+                $('#gif8').attr("src", currentResponse.data[7].images.original_still.url);
+                $('#gif9').attr("src", currentResponse.data[8].images.original_still.url);
+                $('#gif10').attr("src", currentResponse.data[9].images.original_still.url);
             });
         });
 
         $('#beer').click(function() {
-            (response).empty;
+            $(currentResponse).val('');
+            search = "beer";
             $.ajax({
                 url: queryURL,
                 method: "GET"
             }).then(function(response) {
-                search = "beer";
-                $('#gif1').attr("src", response.data[0].images.original_still.url);
-                $('#gif2').attr("src", response.data[1].images.original_still.url);
-                $('#gif3').attr("src", response.data[2].images.original_still.url);
-                $('#gif4').attr("src", response.data[3].images.original_still.url);
-                $('#gif5').attr("src", response.data[4].images.original_still.url);
-                $('#gif6').attr("src", response.data[5].images.original_still.url);
-                $('#gif7').attr("src", response.data[6].images.original_still.url);
-                $('#gif8').attr("src", response.data[7].images.original_still.url);
-                $('#gif9').attr("src", response.data[8].images.original_still.url);
-                $('#gif10').attr("src", response.data[9].images.original_still.url);
+                currentResponse = response
+                $('#gif1').attr("src", currentResponse.data[0].images.original_still.url);
+                $('#gif2').attr("src", currentResponse.data[1].images.original_still.url);
+                $('#gif3').attr("src", currentResponse.data[2].images.original_still.url);
+                $('#gif4').attr("src", currentResponse.data[3].images.original_still.url);
+                $('#gif5').attr("src", currentResponse.data[4].images.original_still.url);
+                $('#gif6').attr("src", currentResponse.data[5].images.original_still.url);
+                $('#gif7').attr("src", currentResponse.data[6].images.original_still.url);
+                $('#gif8').attr("src", currentResponse.data[7].images.original_still.url);
+                $('#gif9').attr("src", currentResponse.data[8].images.original_still.url);
+                $('#gif10').attr("src", currentResponse.data[9].images.original_still.url);
             });
         });
 
         $('#coding').click(function() {
-            (response).empty;
+            $(currentResponse).val('');
+            search = "coding";
             $.ajax({
                 url: queryURL,
                 method: "GET"
             }).then(function(response) {
-                search = "coding";
-                $('#gif1').attr("src", response.data[0].images.original_still.url);
-                $('#gif2').attr("src", response.data[1].images.original_still.url);
-                $('#gif3').attr("src", response.data[2].images.original_still.url);
-                $('#gif4').attr("src", response.data[3].images.original_still.url);
-                $('#gif5').attr("src", response.data[4].images.original_still.url);
-                $('#gif6').attr("src", response.data[5].images.original_still.url);
-                $('#gif7').attr("src", response.data[6].images.original_still.url);
-                $('#gif8').attr("src", response.data[7].images.original_still.url);
-                $('#gif9').attr("src", response.data[8].images.original_still.url);
-                $('#gif10').attr("src", response.data[9].images.original_still.url);
+                currentResponse = response
+                $('#gif1').attr("src", currentResponse.data[0].images.original_still.url);
+                $('#gif2').attr("src", currentResponse.data[1].images.original_still.url);
+                $('#gif3').attr("src", currentResponse.data[2].images.original_still.url);
+                $('#gif4').attr("src", currentResponse.data[3].images.original_still.url);
+                $('#gif5').attr("src", currentResponse.data[4].images.original_still.url);
+                $('#gif6').attr("src", currentResponse.data[5].images.original_still.url);
+                $('#gif7').attr("src", currentResponse.data[6].images.original_still.url);
+                $('#gif8').attr("src", currentResponse.data[7].images.original_still.url);
+                $('#gif9').attr("src", currentResponse.data[8].images.original_still.url);
+                $('#gif10').attr("src", currentResponse.data[9].images.original_still.url);
             });
         });
 
         $('#searchBtn').click(function() {
-            (response).empty;
+            $(currentResponse).val('');
+            search = $('#searchText').attr("Placeholder").val().trim();
             $.ajax({
                 url: queryURL,
                 method: "GET"
             }).then(function(response) {
-                search = $('#searchText').attr("Placeholder").val().trim();
-                $('#gif1').attr("src", response.data[0].images.original_still.url);
-                $('#gif2').attr("src", response.data[1].images.original_still.url);
-                $('#gif3').attr("src", response.data[2].images.original_still.url);
-                $('#gif4').attr("src", response.data[3].images.original_still.url);
-                $('#gif5').attr("src", response.data[4].images.original_still.url);
-                $('#gif6').attr("src", response.data[5].images.original_still.url);
-                $('#gif7').attr("src", response.data[6].images.original_still.url);
-                $('#gif8').attr("src", response.data[7].images.original_still.url);
-                $('#gif9').attr("src", response.data[8].images.original_still.url);
-                $('#gif10').attr("src", response.data[9].images.original_still.url);
+                currentResponse = response
+                $('#gif1').attr("src", currentResponse.data[0].images.original_still.url);
+                $('#gif2').attr("src", currentResponse.data[1].images.original_still.url);
+                $('#gif3').attr("src", currentResponse.data[2].images.original_still.url);
+                $('#gif4').attr("src", currentResponse.data[3].images.original_still.url);
+                $('#gif5').attr("src", currentResponse.data[4].images.original_still.url);
+                $('#gif6').attr("src", currentResponse.data[5].images.original_still.url);
+                $('#gif7').attr("src", currentResponse.data[6].images.original_still.url);
+                $('#gif8').attr("src", currentResponse.data[7].images.original_still.url);
+                $('#gif9').attr("src", currentResponse.data[8].images.original_still.url);
+                $('#gif10').attr("src", currentResponse.data[9].images.original_still.url);
             });
         });
 
