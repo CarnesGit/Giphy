@@ -255,4 +255,16 @@ $(document).ready(function() {
             }
         });
     });
+
+    $('#search').append('<button  id="fav" type="button" class="btn btn-primary">Make this search a Favorite!</button>')
+    $('#fav').click(function() {
+        $('#myBtns').append('<div id="userBtns"></div>')
+        var buttonNum = 0
+        for (i = 0; i < buttonNum.length; i++) {
+            var btnId = user[i];
+            $('#userBtns').append('<button id="', btnId, '" type="button" class="btn btn-primary">' + search + '</button>');
+            buttonNum++;
+        };
+        console.log(btnId);
+    });
 });
