@@ -27,7 +27,7 @@ $(document).ready(function() {
 
         $('#scienceFiction').click(function() {
             $(currentResponse).val('');
-            search = "science fiction";
+            search = "science" + "fiction";
             $.ajax({
                 url: queryURL,
                 method: "GET"
@@ -111,7 +111,7 @@ $(document).ready(function() {
 
         $('#searchBtn').click(function() {
             $(currentResponse).val('');
-            search = $('#searchText').attr("Placeholder").val().trim();
+            search = $('#searchText').val().trim();
             $.ajax({
                 url: queryURL,
                 method: "GET"
